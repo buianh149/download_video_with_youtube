@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Download Video or Audio</h1>
+  <form method="POST">
+    <label for="Enter URL">Enter URL:</label><br>
+    <input type="url" id="Enter URL" name="Enter URL">
+    <input type="submit" value="search" onclick="search()">
+    <br>
+
+    <label for="res">Download Video or Audio!</label>
+    <select name="video or audio" id="video or audio">
+      <optgroup label="Video">
+        {% for video in videos %}
+        <option value="{{video[0]}}">{{video[1]}}</option>
+        {% endfor %}
+      </optgroup>
+      <optgroup label="Video (no audio)">
+        {% for video in video_adaps %}
+        <option value="{{video[0]}}">{{video[1]}}{{"--"}}{{video[2]}}</option>
+        {% endfor %}
+      </optgroup>
+      <optgroup label="Audio">
+        {% for audio in audios %}
+        <option value="{{audio[0]}}">{{audio[1]}}</option>
+        {% endfor %}
+      </optgroup>
+    </select>
+  </form>
+
+  <script>
+    function search() { };
+  </script>
+</body>
+
+</html>

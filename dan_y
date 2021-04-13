@@ -1,0 +1,5 @@
+thư viện hỗ trợ: pytube, os, 
+phải truy suất dc chất lượng, loại file( 360p, 720p, fullHD, auto, mp3)
+phải xây dựng 1 hàm file_location 
+phải xây dựng hàm main(): để select chất lượng file 
+phải xây dựng hàm kiểm tra URL xem có đúng đinh dạng k
